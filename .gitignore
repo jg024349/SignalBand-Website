@@ -1,0 +1,8 @@
+# Visual Studio local workspace/cache files
+.vs/
+
+# OS/editor files
+Thumbs.db
+Desktop.ini
+*.tmp
+*.log

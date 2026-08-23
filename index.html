@@ -55,11 +55,11 @@
       </article>
       <article>
         <strong>Flexible</strong>
-        <span>Edit pitch, offense, and runner calls for your system.</span>
+        <span>Edit pitch, offense, and defense calls for your system.</span>
       </article>
       <article>
         <strong>Owned</strong>
-        <span>Built to avoid yearly software fees.</span>
+        <span>Built to avoid yearly subscription fees.</span>
       </article>
     </section>
 
@@ -135,7 +135,11 @@
         </figure>
         <figure>
           <img src="app-setup.png" alt="SignalBand setup screen with system ID, team key, and editable calls">
-          <figcaption>Local setup</figcaption>
+          <figcaption>Team setup</figcaption>
+        </figure>
+        <figure>
+          <img src="app-setup-edit.png" alt="SignalBand editable calls setup screen with restore buttons">
+          <figcaption>Editable calls</figcaption>
         </figure>
       </div>
     </section>
@@ -177,14 +181,41 @@
       </ul>
     </section>
 
-    <section class="cta" id="contact">
-      <img src="sb-mark-web.png" alt="" aria-hidden="true">
-      <div>
-        <p class="eyebrow">SignalBand</p>
+    <section class="cta contact-panel" id="contact">
+      <div class="contact-copy">
+        <img src="sb-mark-web.png" alt="" aria-hidden="true">
+        <p class="eyebrow">Contact</p>
         <h2>Ready to test it with your team?</h2>
-        <p>Built for coaches who want fast communication, clean execution, and no subscription hanging over the program.</p>
+        <p>Built for coaches who want fast communication, clean execution, and no subscription hanging over the program. Send your info and we will follow up about a demo, pricing, and team setup.</p>
       </div>
-      <a class="button primary" href="mailto:hello@signalband.com?subject=SignalBand%20Demo%20Request">Request a demo</a>
+      <form class="contact-form" action="https://formsubmit.co/jamie@signalbandllc.com" method="POST">
+        <input type="hidden" name="_subject" value="New SignalBand demo request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
+
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" autocomplete="tel" required>
+        </label>
+        <label>
+          <span>Team / Program</span>
+          <input type="text" name="team">
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="Tell us your sport, age level, and how many watches you may need."></textarea>
+        </label>
+        <button class="button primary" type="submit">Submit</button>
+      </form>
     </section>
   </main>
 
