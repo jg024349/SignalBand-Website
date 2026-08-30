@@ -1473,3 +1473,182 @@ footer {
       url("sb-motto-web.jpg") center bottom 54px/280px auto no-repeat;
   }
 }
+
+/* Mobile hamburger navigation */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    height: 72px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .brand,
+  .brand:link,
+  .brand:visited,
+  .brand:hover,
+  .brand:active,
+  .brand:focus {
+    min-width: 0;
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .brand img {
+    width: 50px;
+    height: 36px;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: 46px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 8px;
+    color: #fff;
+    background: rgba(255,255,255,.08);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 99px;
+    background: currentColor;
+    transition: transform .16s ease, opacity .16s ease;
+  }
+
+  .site-header.nav-open .menu-toggle span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .site-header.nav-open .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .site-header.nav-open .menu-toggle span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .site-header nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 8px;
+    background: rgba(11,15,26,.98);
+    box-shadow: 0 18px 44px rgba(11,15,26,.28);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity .16s ease, transform .16s ease;
+  }
+
+  .site-header.nav-open nav {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .site-header nav a,
+  .site-header nav a:link,
+  .site-header nav a:visited,
+  .site-header nav a:hover,
+  .site-header nav a:active,
+  .site-header nav a:focus,
+  .site-header nav a[aria-current="page"] {
+    display: flex;
+    width: 100%;
+    min-height: 44px;
+    align-items: center;
+    padding: 0 12px;
+    border-radius: 6px;
+    color: rgba(255,255,255,.9);
+    font-size: .95rem;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .site-header nav a:hover,
+  .site-header nav a:focus,
+  .site-header nav a[aria-current="page"] {
+    color: #fff;
+    background: rgba(255,255,255,.08);
+  }
+
+  .hero,
+  .pricing-hero {
+    padding-top: 104px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .menu-toggle {
+    position: fixed;
+    top: 15px;
+    right: 16px;
+    z-index: 30;
+    display: inline-flex !important;
+  }
+
+  .site-header .menu-toggle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .menu-toggle {
+    color: var(--navy);
+    background: var(--gold-2);
+    border-color: var(--gold-2);
+    font-size: .82rem;
+    font-weight: 900;
+  }
+
+  .site-header .menu-toggle .menu-icon {
+    display: block;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .menu-toggle {
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header .menu-toggle {
+    left: min(calc(100vw - 62px), 328px);
+    right: auto;
+  }
+}

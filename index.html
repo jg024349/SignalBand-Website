@@ -22,7 +22,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=seo-mobile-6">
+  <link rel="stylesheet" href="styles.css?v=mobile-menu-6">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -79,14 +79,16 @@
       }
     ]
   }
-  </script></head>
+  </script>
+</head>
 <body>
   <header class="site-header" aria-label="SignalBand">
     <a class="brand" href="#top" aria-label="SignalBand home">
       <img src="sb-mark-web.png" alt="" aria-hidden="true">
       <span>SignalBand</span>
     </a>
-    <nav aria-label="Main navigation">
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation"><span class="menu-icon" aria-hidden="true">&#9776;</span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
       <a href="#why">Why</a>
       <a href="#works">How it works</a>
       <a href="pricing.html">Pricing</a>
@@ -317,5 +319,28 @@
     <span>SignalBand LLC</span>
     <span>No-subscription electronic pitch calling.</span>
   </footer>
-</body>
+  <script id="mobile-menu-script">
+    document.addEventListener("DOMContentLoaded", function () {
+      var header = document.querySelector(".site-header");
+      var button = document.querySelector(".menu-toggle");
+      var nav = document.querySelector("#main-navigation");
+      if (!header || !button || !nav) return;
+
+      function setOpen(isOpen) {
+        header.classList.toggle("nav-open", isOpen);
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        button.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      }
+
+      button.addEventListener("click", function () {
+        setOpen(!header.classList.contains("nav-open"));
+      });
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setOpen(false);
+        });
+      });
+    });
+  </script></body>
 </html>
