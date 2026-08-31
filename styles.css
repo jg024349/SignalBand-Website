@@ -1652,3 +1652,308 @@ footer {
     right: auto;
   }
 }
+
+/* About page */
+.about-page {
+  background: #fff;
+}
+
+.about-hero,
+.about-story,
+.about-values,
+.about-quote {
+  width: min(var(--site-width), calc(100% - 36px));
+  margin: 0 auto;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(30px, 6vw, 76px);
+  align-items: center;
+  padding: 132px 0 72px;
+}
+
+.about-copy h1 {
+  color: var(--navy);
+  font-size: clamp(2.55rem, 5.6vw, 5.4rem);
+  line-height: .92;
+}
+
+.about-copy p:not(.eyebrow) {
+  max-width: 680px;
+  margin-top: 22px;
+  color: #4b5563;
+  font-size: clamp(1.04rem, 1.6vw, 1.24rem);
+  line-height: 1.55;
+  font-weight: 650;
+}
+
+.button.secondary.light {
+  color: var(--navy);
+  border-color: #d9e0e8;
+  background: #fff;
+}
+
+.about-headshot {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #dde2ea;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 20px 54px rgba(16,20,32,.12);
+}
+
+.about-headshot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.about-headshot figcaption {
+  display: grid;
+  gap: 5px;
+  padding: 18px 20px 20px;
+  border-top: 1px solid #dde2ea;
+}
+
+.about-headshot strong {
+  color: var(--navy);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.about-headshot span {
+  color: #4b5563;
+  font-weight: 650;
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: clamp(26px, 5vw, 64px);
+  align-items: start;
+  padding: 58px 0;
+  border-top: 1px solid #dde2ea;
+}
+
+.story-panel {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+  border: 1px solid #dde2ea;
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.story-panel p,
+.about-values p,
+.about-quote span,
+.about-cta p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-weight: 650;
+}
+
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 8px 0 62px;
+}
+
+.about-values article {
+  padding: 22px;
+  border: 1px solid #dde2ea;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.about-values p {
+  margin-top: 10px;
+}
+
+.about-quote {
+  padding: 38px;
+  color: #fff;
+  border-radius: 8px;
+  background: var(--navy);
+}
+
+.about-quote p {
+  max-width: 880px;
+  font-size: clamp(1.45rem, 3vw, 2.6rem);
+  line-height: 1.12;
+  font-weight: 900;
+}
+
+.about-quote span {
+  display: block;
+  margin-top: 18px;
+  color: var(--gold-2);
+}
+
+.about-cta {
+  grid-template-columns: 1fr auto;
+}
+
+@media (max-width: 900px) {
+  .about-hero,
+  .about-story,
+  .about-values,
+  .about-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    padding-top: 136px;
+  }
+
+  .about-headshot {
+    max-width: 520px;
+  }
+
+  .about-values {
+    padding-bottom: 52px;
+  }
+
+  .about-cta .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .about-hero,
+  .about-story,
+  .about-values,
+  .about-quote,
+  .about-cta {
+    width: min(100% - 28px, var(--site-width));
+  }
+
+  .about-hero {
+    padding-top: 104px;
+    padding-bottom: 48px;
+  }
+
+  .about-copy h1 {
+    font-size: clamp(2.35rem, 13vw, 3.05rem);
+  }
+
+  .story-panel,
+  .about-quote {
+    padding: 22px;
+  }
+}
+/* Desktop density: tighter desktop layout without changing the page center. */
+@media (min-width: 761px) {
+  html {
+    font-size: 86%;
+  }
+
+  :root {
+    --site-width: 1120px;
+  }
+
+  .site-header {
+    height: 76px;
+    padding: 0 58px;
+  }
+
+  .brand,
+  .brand:link,
+  .brand:visited,
+  .brand:hover,
+  .brand:active,
+  .brand:focus {
+    gap: 10px;
+    font-size: 1.16rem;
+  }
+
+  .brand img {
+    width: 54px;
+    height: 40px;
+  }
+
+  nav {
+    gap: 28px;
+  }
+
+  .hero {
+    min-height: 82vh;
+    padding-top: 92px;
+    padding-bottom: 48px;
+  }
+
+  .proof-strip {
+    margin-top: -36px;
+  }
+
+  .section {
+    padding-top: 58px;
+  }
+
+  .watch-showcase,
+  .kit-showcase,
+  .seo-faq {
+    padding-top: 52px;
+    padding-bottom: 60px;
+  }
+
+  .app-showcase {
+    padding-top: 36px;
+    padding-bottom: 58px;
+  }
+
+  .pricing-hero,
+  .about-hero {
+    padding-top: 106px;
+  }
+
+  .price-columns {
+    padding-bottom: 64px;
+  }
+}
+/* Stable desktop navigation sizing. */
+@media (min-width: 761px) {
+  .site-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+
+  .site-header nav a,
+  .site-header nav a:link,
+  .site-header nav a:visited,
+  .site-header nav a:hover,
+  .site-header nav a:active,
+  .site-header nav a:focus,
+  .site-header nav a[aria-current="page"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: max-content;
+    height: 42px;
+    padding: 0 2px;
+    border: 0;
+    color: rgba(255,255,255,.78);
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+    letter-spacing: 0;
+    transform: none;
+    scale: 1;
+    transition: none;
+  }
+
+  .site-header nav a:hover,
+  .site-header nav a:focus,
+  .site-header nav a[aria-current="page"] {
+    color: #fff;
+  }
+}
