@@ -6,3 +6,7 @@ Thumbs.db
 Desktop.ini
 *.tmp
 *.log
+
+# Firmware signing keys belong only in the private firmware workspace.
+.firmware-private/
+update-signing-key.pem

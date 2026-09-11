@@ -1,0 +1,11 @@
+/updates/*
+  X-Robots-Tag: noindex
+  X-Content-Type-Options: nosniff
+
+/updates/latest.json
+  Content-Type: application/json
+  Cache-Control: no-store, no-transform
+
+/updates/*.bin
+  Content-Type: application/octet-stream
+  Cache-Control: public, max-age=31536000, immutable, no-transform
