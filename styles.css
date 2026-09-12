@@ -336,13 +336,15 @@ h3 {
 .watch-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 34px);
-  align-items: end;
-  margin-top: 34px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1000px;
+  margin: 34px auto 0;
 }
 
 .watch-card {
   margin: 0;
+  min-width: 0;
   text-align: center;
 }
 
@@ -350,7 +352,8 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 440px;
+  max-width: 220px;
+  margin: 0 auto;
   object-fit: contain;
   object-position: center;
 }
