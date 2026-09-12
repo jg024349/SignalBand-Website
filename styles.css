@@ -335,7 +335,7 @@ h3 {
 
 .watch-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(18px, 3vw, 34px);
   align-items: end;
   margin-top: 34px;
@@ -349,6 +349,7 @@ h3 {
 .watch-card img {
   display: block;
   width: 100%;
+  height: auto;
   max-height: 440px;
   object-fit: contain;
   object-position: center;
@@ -391,11 +392,14 @@ h3 {
 
 .phone-grid figure {
   margin: 0;
-  overflow: hidden;
-  border: 1px solid #dde2ea;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 16px 38px rgba(16,20,32,.1);
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.phone-grid .phone-shell {
+  width: min(100%, 270px);
+  margin: 0 auto;
 }
 
 .phone-grid img {
@@ -412,7 +416,6 @@ h3 {
   color: var(--navy);
   font-size: .92rem;
   font-weight: 900;
-  border-top: 1px solid #dde2ea;
 }
 
 .how {
@@ -800,6 +803,24 @@ footer {
   width: 100%;
   border-radius: 24px;
   background: #edf5f3;
+}
+
+.phone-screen {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #edf5f3;
+}
+
+.phone-screen img {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  border-radius: 0;
+  transform: translateY(-6%);
 }
 
 .price-columns {
