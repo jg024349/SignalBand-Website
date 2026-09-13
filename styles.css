@@ -810,7 +810,8 @@ footer {
 
 .phone-screen {
   position: relative;
-  aspect-ratio: 9 / 16;
+  /* Match the screenshots after removing only the top 6% status bar. */
+  aspect-ratio: calc(1206 / (2622 * 0.94));
   overflow: hidden;
   border-radius: 24px;
   background: #edf5f3;
