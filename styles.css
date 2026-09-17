@@ -581,6 +581,24 @@ footer {
   background: var(--navy);
   font-weight: 800;
 }
+footer a,
+footer a:link,
+footer a:visited {
+  color: rgba(255,255,255,.82);
+  text-decoration: none;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--gold-2);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-links {
+  display: inline-flex;
+  gap: 16px;
+}
 
 @media (max-width: 850px) {
   .site-header {
@@ -1087,7 +1105,9 @@ footer {
   .pricing-hero,
   .price-columns,
   .kit-showcase,
-  .pricing-summary {
+  .pricing-summary,
+  .warranty-hero,
+  .warranty-content {
     width: min(100% - 28px, var(--site-width));
   }
 
@@ -1981,4 +2001,75 @@ footer {
   .site-header nav a[aria-current="page"] {
     color: #fff;
   }
+}
+
+/* Warranty page */
+.warranty-page {
+  background: #fff;
+}
+
+.warranty-hero {
+  width: min(100% - 40px, var(--site-width));
+  margin: 0 auto;
+  padding: 154px 0 36px;
+}
+
+.warranty-hero h1 {
+  max-width: 900px;
+  font-size: clamp(3rem, 6vw, 5.8rem);
+  line-height: .92;
+}
+
+.warranty-hero p:not(.eyebrow) {
+  width: min(760px, 100%);
+  margin-top: 22px;
+  color: var(--gray);
+  font-size: 1.08rem;
+  line-height: 1.62;
+  font-weight: 650;
+}
+
+.warranty-content {
+  width: min(100% - 40px, var(--site-width));
+  margin: 0 auto 70px;
+  display: grid;
+  gap: 18px;
+}
+
+.warranty-panel {
+  border: 1px solid rgba(17,24,39,.12);
+  border-radius: 8px;
+  padding: clamp(22px, 4vw, 34px);
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(17,24,39,.07);
+}
+
+.warranty-panel h2 {
+  margin-bottom: 16px;
+  font-size: clamp(1.65rem, 2.6vw, 2.45rem);
+}
+
+.warranty-panel p,
+.warranty-list {
+  color: #394150;
+  font-size: 1rem;
+  line-height: 1.68;
+  font-weight: 650;
+}
+
+.warranty-panel p + p {
+  margin-top: 14px;
+}
+
+.warranty-list {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.warranty-list li + li {
+  margin-top: 12px;
+}
+
+.warranty-panel .button {
+  margin-top: 22px;
 }

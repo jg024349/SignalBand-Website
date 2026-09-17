@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignalBand Warranty | 1-Year Limited Warranty</title>
+  <meta name="description" content="SignalBand LLC 1-Year Limited Warranty for SignalBand coach and player watches.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SignalBand LLC">
+  <link rel="canonical" href="https://signalbandllc.com/warranty.html">
+  <link rel="icon" href="sb-mark-web.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SignalBand">
+  <meta property="og:title" content="SignalBand 1-Year Limited Warranty">
+  <meta property="og:description" content="Warranty coverage and exclusions for SignalBand coach and player watches.">
+  <meta property="og:url" content="https://signalbandllc.com/warranty.html">
+  <meta property="og:image" content="https://signalbandllc.com/sb-full-logo-motto.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SignalBand 1-Year Limited Warranty">
+  <meta name="twitter:description" content="Warranty coverage and exclusions for SignalBand coach and player watches.">
+  <meta name="twitter:image" content="https://signalbandllc.com/sb-full-logo-motto.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=warranty-1">
+</head>
+<body class="warranty-page">
+  <header class="site-header" aria-label="SignalBand">
+    <a class="brand" href="index.html" aria-label="SignalBand home">
+      <img src="sb-mark-web.png" alt="" aria-hidden="true">
+      <span>SignalBand</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation"><span class="menu-icon" aria-hidden="true">&#9776;</span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a href="index.html#why">Why</a>
+      <a href="index.html#works">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="warranty-hero">
+      <div>
+        <p class="eyebrow">SignalBand support</p>
+        <h1>1-Year Limited Warranty</h1>
+        <p>SignalBand LLC stands behind normal field use of SignalBand coach and player watches. This page explains what is covered, what is not covered, and how out-of-warranty replacements work.</p>
+      </div>
+    </section>
+
+    <section class="warranty-content" aria-label="SignalBand warranty details">
+      <article class="warranty-panel">
+        <h2>1-Year Limited Warranty</h2>
+        <p>SignalBand LLC offers a <strong>1-Year Limited Warranty</strong> from the date of delivery covering defects in materials and workmanship under normal use. If a SignalBand coach watch or player watch fails due to a covered hardware defect during the warranty period, SignalBand LLC will repair or replace the device at no charge.</p>
+        <p>This warranty applies only to normal use of the product as intended. SignalBand watches are electronic devices and should be kept dry, protected from impact, and used according to the provided instructions.</p>
+      </article>
+
+      <article class="warranty-panel">
+        <h2>What is not covered</h2>
+        <ul class="warranty-list">
+          <li><strong>Impact Damage:</strong> Damage caused by drops, foul balls, bat strikes, stepped-on devices, crushed devices, or other physical impact.</li>
+          <li><strong>Water or Moisture Damage:</strong> Damage caused by water exposure, submersion, rain, wet storage, sweat buildup, condensation, or charging the device while wet.</li>
+          <li><strong>Battery Degradation:</strong> Normal reduction in battery life over time due to use, age, charging cycles, or improper long-term storage.</li>
+          <li><strong>Charging or Cable Damage:</strong> Damage caused by improper chargers, damaged charging cables, charging while wet, overheating during charging, or failure to follow charging instructions.</li>
+          <li><strong>Unauthorized Tampering:</strong> Devices that have been opened, modified, repaired by someone other than SignalBand LLC, or loaded with unauthorized or third-party software.</li>
+          <li><strong>Misuse or Neglect:</strong> Damage caused by improper storage, excessive heat, leaving the device in direct sunlight or a hot vehicle, failure to charge before storage, or use outside the intended purpose.</li>
+        </ul>
+      </article>
+
+      <article class="warranty-panel">
+        <h2>Out-of-warranty replacements</h2>
+        <p>We know accidents happen on the field. If a device is damaged outside of warranty coverage, such as from impact, water exposure, or improper storage, SignalBand LLC offers single-unit replacement options so customers do not have to purchase a full team package. Contact us for replacement pricing.</p>
+        <a class="button primary" href="index.html#contact">Contact SignalBand</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>SignalBand LLC</span>
+    <span class="footer-links"><a href="warranty.html" aria-current="page">Warranty</a></span>
+    <span>No-subscription electronic pitch calling.</span>
+  </footer>
+  <script id="mobile-menu-script">
+    document.addEventListener("DOMContentLoaded", function () {
+      var header = document.querySelector(".site-header");
+      var button = document.querySelector(".menu-toggle");
+      var nav = document.querySelector("#main-navigation");
+      if (!header || !button || !nav) return;
+
+      function setOpen(isOpen) {
+        header.classList.toggle("nav-open", isOpen);
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        button.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      }
+
+      button.addEventListener("click", function () {
+        setOpen(!header.classList.contains("nav-open"));
+      });
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setOpen(false);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
