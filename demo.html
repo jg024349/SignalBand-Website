@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SignalBand Demo & Info | Initial Setup</title>
+  <meta name="description" content="Watch SignalBand demo and information videos, starting with the Initial Setup walkthrough for coach and player watches.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="SignalBand LLC">
+  <link rel="canonical" href="https://signalbandllc.com/demo.html">
+  <link rel="icon" href="sb-mark-web.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SignalBand">
+  <meta property="og:title" content="SignalBand Demo & Info">
+  <meta property="og:description" content="SignalBand setup demos and information videos for teams.">
+  <meta property="og:url" content="https://signalbandllc.com/demo.html">
+  <meta property="og:image" content="https://signalbandllc.com/videos/initial-setup-poster.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SignalBand Demo & Info">
+  <meta name="twitter:description" content="Watch SignalBand setup demos and information videos for teams.">
+  <meta name="twitter:image" content="https://signalbandllc.com/videos/initial-setup-poster.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;650;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=demo-1">
+</head>
+<body class="demo-page">
+  <header class="site-header" aria-label="SignalBand">
+    <a class="brand" href="index.html" aria-label="SignalBand home">
+      <img src="sb-mark-web.png" alt="" aria-hidden="true">
+      <span>SignalBand</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-navigation"><span class="menu-icon" aria-hidden="true">&#9776;</span></button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a href="index.html#why">Why</a>
+      <a href="index.html#works">How it works</a>
+      <a href="demo.html" aria-current="page">Demo</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="demo-hero">
+      <div>
+        <p class="eyebrow">Demo & Info</p>
+        <h1>See SignalBand setup in action.</h1>
+        <p>Short walkthroughs for setting up, caring for, and using SignalBand coach and player watches.</p>
+      </div>
+    </section>
+
+    <section class="demo-library" aria-label="SignalBand demo videos">
+      <article class="demo-video-card">
+        <div class="demo-video-copy">
+          <p class="eyebrow">First video</p>
+          <h2>Initial Setup</h2>
+          <p>First-time setup for one watch: power on, select Master and Player 1, connect your phone to the default PitchCall Wi-Fi network, set the System ID and Team Key for encryption, then Save and Restart. After the watch reboots, power it off and repeat the same process for each watch.</p>
+        </div>
+        <div class="demo-video-frame">
+          <video controls preload="metadata" playsinline poster="videos/initial-setup-poster.jpg">
+            <source src="videos/initial-setup.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>SignalBand LLC</span>
+    <span class="footer-links"><a href="warranty.html">Warranty</a></span>
+    <span>No-subscription electronic pitch calling.</span>
+  </footer>
+  <script id="mobile-menu-script">
+    document.addEventListener("DOMContentLoaded", function () {
+      var header = document.querySelector(".site-header");
+      var button = document.querySelector(".menu-toggle");
+      var nav = document.querySelector("#main-navigation");
+      if (!header || !button || !nav) return;
+
+      function setOpen(isOpen) {
+        header.classList.toggle("nav-open", isOpen);
+        button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        button.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+      }
+
+      button.addEventListener("click", function () {
+        setOpen(!header.classList.contains("nav-open"));
+      });
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setOpen(false);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
