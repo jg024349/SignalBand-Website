@@ -2159,7 +2159,7 @@ footer a:focus {
 }
 /* Demo page */
 .demo-page {
-  background: #fff;
+  background: var(--paper);
 }
 
 .demo-hero {
@@ -2169,9 +2169,17 @@ footer a:focus {
 }
 
 .demo-hero h1 {
-  max-width: 900px;
-  font-size: clamp(3rem, 6vw, 5.8rem);
-  line-height: .92;
+  max-width: 1000px;
+  font-size: 2.5rem;
+  font-weight: 650;
+  line-height: 1.12;
+}
+
+.demo-hero .eyebrow {
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: .12em;
 }
 
 .demo-hero p:not(.eyebrow) {
@@ -2184,36 +2192,38 @@ footer a:focus {
 }
 
 .demo-library {
-  width: min(100% - 40px, var(--site-width));
-  margin: 0 auto 70px;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+  margin: 0 0 70px calc(50% - 50vw);
+  padding: 30px max(16px, calc((100vw - var(--site-width)) / 2)) 40px;
+  background: #fff;
 }
 
 .demo-video-card {
-  display: grid;
-  gap: clamp(22px, 4vw, 34px);
-  align-items: start;
-  border: 1px solid rgba(17,24,39,.12);
-  border-radius: 8px;
-  padding: clamp(22px, 4vw, 36px);
-  background: #fff;
-  box-shadow: 0 16px 42px rgba(17,24,39,.07);
+  --demo-player-width: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 0;
+}
+
+.demo-video-copy,
+.demo-video-frame {
+  width: min(100%, var(--demo-player-width));
 }
 
 .demo-video-copy h2 {
-  margin-bottom: 16px;
-  font-size: clamp(1.9rem, 3.2vw, 3.1rem);
-}
-
-.demo-video-copy p:not(.eyebrow) {
-  color: #394150;
-  font-size: 1rem;
-  line-height: 1.68;
-  font-weight: 650;
-}
-
-.demo-video-frame {
-  width: min(100%, 440px);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
 }
 
 .demo-video-frame video {
@@ -2227,7 +2237,30 @@ footer a:focus {
 }
 
 @media (max-width: 820px) {
+  .demo-library {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .demo-video-frame {
-    width: min(100%, 360px);
+    width: min(100%, var(--demo-player-width));
+  }
+}
+
+@media (max-width: 560px) {
+  .demo-library {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .demo-hero {
+    padding-top: 132px;
+  }
+
+  .demo-hero h1 {
+    font-size: 2rem;
+    line-height: 1.12;
+  }
+
+  .demo-hero .eyebrow {
+    font-size: 1rem;
   }
 }
