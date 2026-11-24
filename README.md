@@ -2,6 +2,13 @@
 
 Static marketing site for SignalBand.
 
+## Current OTA release
+
+**1.0.9 (build 10)** is staged for both Standard/S3 and Rugged/Ultra watches.
+See [OTA-DEPLOYMENT.md](OTA-DEPLOYMENT.md) for the two update paths, deployment
+steps and the one-time USB flash required on existing Ultra development watches.
+These local files have not been deployed to the live website.
+
 Open `index.html` in a browser to preview locally.
 
 ## Watch Firmware Updates
